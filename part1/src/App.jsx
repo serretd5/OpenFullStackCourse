@@ -12,13 +12,13 @@ const Content = (props) => {
   return (
     <div>
       <p>
-        {props.part1}
+        {props.part1} {props.exercises1}
       </p>
       <p>
-        {props.part2}
+        {props.part2} {props.exercises2}
       </p>
       <p>
-        {props.part3}
+        {props.part3} {props.exercises3}
       </p>
     </div>
   )
@@ -55,8 +55,8 @@ const App = () => {
   return (
     <div>
       <Header course={course}/>
-      <Content part1={parts[0]['name']['exercises']} part2={parts[1]['name']['exercises']} part3 = {parts[3]['name']['exercises']}/>
-      <Total suma = {parts[0][1] + parts[1][1] + parts[2][1]}/>
+      <Content part1={parts[0]['name']} exercises1 = {parts[0]['exercises']} part2={parts[1]['name']} exercises2 = {parts[1]['exercises']} part3={parts[2]['name']} exercises3 = {parts[2]['exercises']} />
+      <Total suma = {parts[0]['exercises'] + parts[1]['exercises'] + parts[2]['exercises']}/>
     </div>
   )
 }
