@@ -55,9 +55,9 @@ const App = () => {
   }
   return (
     <div>
-      <Header course={course}/>
-      <Content part1={course['parts'][0]['name']} exercises1 = {course['parts'][1]['exercises']} part2={course['parts'][1]['name']} exercises2 = {course['parts'][1]['exercises']} part3={course['parts'][2]['name']} exercises3 = {course['parts'][2]['exercises']} />
-      <Total suma = {parts[0]['exercises'] + parts[1]['exercises'] + parts[2]['exercises']}/>
+      <Header course={course['name']}/>
+      <Content part1={course['parts'][0]['name']} exercises1 = {course['parts'][0]['exercises']} part2={course['parts'][1]['name']} exercises2 = {course['parts'][1]['exercises']} part3={course['parts'][2]['name']} exercises3 = {course['parts'][2]['exercises']} />
+      <Total suma = {course['parts'][0]['exercises'] + course['parts'][1]['exercises'] + course['parts'][2]['exercises']}/>
     </div>
   )
 }
