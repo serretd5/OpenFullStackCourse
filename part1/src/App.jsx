@@ -16,7 +16,7 @@ const App = () => {
   console.log('rendering...', counter)
   return (
     <div>{counter}
-    <button onClick={handleClick}>
+    <button onClick={() => setCounter(counter + 1)}>
         plus
       </button></div>
   )
