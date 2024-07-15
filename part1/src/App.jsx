@@ -5,8 +5,9 @@ import { useState } from 'react'
 const App = () => {
 
   const [ counter, setCounter ] = useState(0)
-
-
+  const handleClick = () => {
+    console.log('clicked')
+  }
   setTimeout(
     () => setCounter(counter + 1),
     1000
@@ -14,7 +15,10 @@ const App = () => {
 
   console.log('rendering...', counter)
   return (
-    <div>{counter}</div>
+    <div>{counter}
+    <button onClick={handleClick}>
+        plus
+      </button></div>
   )
 }
 
