@@ -3,23 +3,27 @@
 import { useState } from 'react'
 
 const App = () => {
-
   const [ counter, setCounter ] = useState(0)
-  const handleClick = () => {
-    console.log('clicked')
-  }
-  setTimeout(
-    () => setCounter(counter + 1),
-    1000
-  )
 
+
+  const increaseByOne = () => setCounter(counter + 1)
+  
+  const setToZero = () => setCounter(0)
   console.log('rendering...', counter)
+
   return (
-    <div>{counter}
-    <button onClick={() => setCounter(counter + 1)}>
+    <div>
+      <div>{counter}</div>
+
+      <button onClick={increaseByOne}>
         plus
-      </button></div>
+      </button>
+
+      <button onClick={setToZero}>
+        zero
+      </button>
+    </div>
   )
 }
-
+  console.log('rendering...', counter)
 export default App
