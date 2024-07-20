@@ -7,25 +7,18 @@ const App = () => {
   const [good, setGood] = useState(0)
   const [neutral, setNeutral] = useState(0)
   const [bad, setBad] = useState(0)
-  const [total, setTotal] = useState(0)
-  const [percent, setPercent] = useState(0)
 
   const handleGoodClick = () => {
     setGood(good + 1)
-    setTotal(total + 1)
-    setPercent(good/total)
+
   }
 
   const handleNeutralClick = () => {
     setNeutral(neutral + 1)
-    setTotal(total+1)
-    setPercent(good/total)
   }
 
   const handleBadClick = () => {
     setBad(bad + 1)
-    setTotal(total + 1)
-    setPercent(good/total)
   }
 
   return (
@@ -37,10 +30,6 @@ const App = () => {
       <p>Good: {good}</p>
       <p>Neutral: {neutral}</p>
       <p>Bad: {bad}</p>
-      <p>All: {total}</p>
-      <p>Percent: {percent}</p>
-      
-
     </div>
   )
 }
