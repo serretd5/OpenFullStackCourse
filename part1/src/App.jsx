@@ -10,6 +10,7 @@ const App = () => {
 
   const handleGoodClick = () => {
     setGood(good + 1)
+
   }
 
   const handleNeutralClick = () => {
@@ -22,12 +23,13 @@ const App = () => {
 
   return (
     <div>
-      {good}
+      <h1>Give Feedback</h1>
       <button onClick={handleGoodClick}>good</button>
-      {neutral}
       <button onClick={handleNeutralClick}>neutral</button>
-      {bad}
       <button onClick={handleBadClick}>bad</button>
+      <p>Good: {good}</p>
+      <p>Neutral: {neutral}</p>
+      <p>Bad: {bad}</p>
     </div>
   )
 }
